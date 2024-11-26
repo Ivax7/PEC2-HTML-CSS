@@ -22,6 +22,7 @@
 body {
   background-color: var(--var-gris);
 }
+
 .container {
   width: 100%;
   max-width: 1140px;
@@ -95,8 +96,9 @@ footer {
   position: fixed;
   bottom: 0;
   font-size: 14px;
-
 }
+
+
 
 .enlaces-footer {
   width: 100%;
@@ -142,8 +144,13 @@ footer {
   padding-left: 0;
 }
 
+.footer-subpage {
+  position: relative;
+}
 
-
+.red-text {
+  color: var(--var-rojo-oscuro);
+}
 
 
 
@@ -153,7 +160,7 @@ footer {
 
 h1 {
   padding-top: 120px;
-  font-size: 64px;
+  font-size: 63px;
 }
 
 h2 {
@@ -187,14 +194,131 @@ button:hover a {
 
 /* ------NOSOTROS------ */
 
-.foco-titulo{
+.foco-titulo {
   padding-top: 50px;
   padding-bottom: 10px;
   margin: 0;
 }
 
-section h3 {
+.active::before {
+  content: "";
+  width: 32px;
+  height: 4px;
+  background-color: var(--var-rojo-oscuro);
+  position: absolute;
+  margin-top: 30px;
+}
+
+
+
+article {
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 70px;
+}
+
+.white {
+  background-color: var(--var-blanco);
+}
+
+.black {
+  background-color: var(--var-negro);
+  color: var(--var-blanco);
+}
+
+
+
+
+article h3 {
   font-size: 40px;
   font-weight: 400;
-  margin-bottom: 50px;
+}
+
+.nosotros h2 {
+  font-weight: 800;
+  font-size: 50px;
+  padding-block: 60px 30px;
+}
+
+.nosotros p {
+  line-height: 2;
+  font-size: 24px;
+}
+
+
+
+.black ul{
+  padding-left: 30px;
+  font-size: 24px;
+  line-height: 2;
+}
+
+.e-mail {
+  color: var(--var-rojo-oscuro);
+}
+
+
+/* ------EVENTOS------ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+caption {
+  font-size: 24px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  padding: 20px;
+  margin-top: 70px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 5px 45px 30px 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  padding: 10px;
+}
+
+
+
+.descripcion a {
+  color: #CC3333;
+  text-decoration: none;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+.descripcion a:hover {
+  text-decoration: underline;
+}
+
+
+.nota {
+  padding: 10px 5px;  
+  text-align: left;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.mas-eventos {
+  text-decoration: none;
+  color: var(--var-rojo-oscuro);
+
+}
+
+.mas-eventos::after {
+  content:"";
+  /*Flechita de font-awesome*/
 }
