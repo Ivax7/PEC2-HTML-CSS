@@ -68,6 +68,15 @@ header a:hover {
   padding: 0;
 }
 
+.active::before {
+  content: "";
+  width: 32px;
+  height: 4px;
+  background-color: var(--var-rojo-oscuro);
+  position: absolute;
+  margin-top: 30px;
+}
+
 nav {
   display: flex;
   justify-content: flex-end;
@@ -88,7 +97,6 @@ nav ul.enlaces-header a {
 }
 
 
-
 footer {
   width: 100%;
   background-color: var(--var-negro);
@@ -97,8 +105,6 @@ footer {
   bottom: 0;
   font-size: 14px;
 }
-
-
 
 .enlaces-footer {
   width: 100%;
@@ -150,31 +156,17 @@ footer {
 
 .red-text {
   color: var(--var-rojo-oscuro);
-}
-
-
-
-/* ------INDEX------ */
-
-
-
-h1 {
-  padding-top: 120px;
-  font-size: 63px;
-}
-
-h2 {
-  font-size: 31px;
-  font-weight:500;
+  text-decoration: none;
 }
 
 button {
-  background-color: var(--var-rojo-oscuro);
-  outline: none;
-  border: none;
-  padding: 20px 28px;
-  margin-top: 40px;
   font-size: 18px;
+  background-color: var(--var-rojo-oscuro);
+  color: var(--var-blanco);
+  border: none;
+  padding: 15px 35px;
+  transition: .2s ease-in-out;
+  margin-top: 40px;
   cursor: pointer;
 }
 
@@ -188,29 +180,6 @@ button:hover a {
   color: var(--var-negro);
 }
 
-
-
-
-
-/* ------NOSOTROS------ */
-
-.foco-titulo {
-  padding-top: 50px;
-  padding-bottom: 10px;
-  margin: 0;
-}
-
-.active::before {
-  content: "";
-  width: 32px;
-  height: 4px;
-  background-color: var(--var-rojo-oscuro);
-  position: absolute;
-  margin-top: 30px;
-}
-
-
-
 article {
   width: 100%;
   max-width: 1140px;
@@ -221,46 +190,59 @@ article {
   padding-bottom: 70px;
 }
 
-.white {
-  background-color: var(--var-blanco);
-}
-
-.black {
-  background-color: var(--var-negro);
-  color: var(--var-blanco);
-}
-
-
-
-
 article h3 {
   font-size: 40px;
   font-weight: 400;
 }
 
+
+
+/* ------INDEX------ */
+
+h1 {
+  padding-top: 120px;
+  font-size: 63px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 31px;
+  font-weight: 500;
+}
+
+
+/* ------NOSOTROS------ */
+
+.foco-titulo {
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+
+.blanco {
+  background-color: var(--var-blanco);
+}
+
+.negro {
+  background-color: var(--var-negro);
+  color: var(--var-blanco);
+}
+
+
 .nosotros h2 {
-  font-weight: 800;
+  font-weight: 900;
   font-size: 50px;
   padding-block: 60px 30px;
 }
 
-.nosotros p {
+.nosotros p, .nosotros ul {
   line-height: 2;
   font-size: 24px;
 }
 
-
-
-.black ul{
-  padding-left: 30px;
-  font-size: 24px;
-  line-height: 2;
+.negro ul {
+  list-style-type: square;
+  margin-left: 20px;
 }
-
-.e-mail {
-  color: var(--var-rojo-oscuro);
-}
-
 
 /* ------EVENTOS------ */
 
@@ -269,6 +251,12 @@ table {
   border-collapse: collapse;
   font-family: Arial, sans-serif;
   font-size: 18px;
+}
+
+table td {
+  vertical-align: top;
+  text-align: left;
+  padding: 10px;
 }
 
 caption {
@@ -285,28 +273,26 @@ th, td {
   border: 1px solid var(--var-negro);
   padding: 4px 25px 25px 10px;
   text-align: left;
+  line-height: 1.5;
+  font-size: 19px;
 }
 
 th {
   background-color: var(--var-gris);
-  font-weight: bold;
+  font-weight: 700;
   padding: 10px;
   font-size: 16px;
 }
 
 
-.descripcion {
-  padding-bottom: 5px;
-}
-
-.descripcion a {
-  color: #CC3333;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.descripcion a:hover {
+.descripcion .red-text:hover {
   text-decoration: underline;
+}
+
+.descripcion a::after {
+  content: "\2192";
+  margin-left: 5px;
+  text-decoration: none;
 }
 
 .nota {
@@ -319,44 +305,71 @@ th {
   margin-bottom: 60px;
 }
 
-.mas-eventos {
-  text-decoration: none;
-  color: var(--var-rojo-oscuro);
-
-}
-
 
 
 
 /* ------FORMULARIO------ */
 
+input {
+  border: 1px solid var(--var-negro);
+  width: 100%;
+  padding: 10px;
+}
+
+input:invalid {
+  border-color: #FF0000;
+}
+
+input:valid {
+  border-color: #4CAF50;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--var-negro);
+  box-shadow: 0 0 8px var(--var-negro);
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.formulario-evento {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 10px;
+  margin-bottom: 80px;
+}
+
 .asterisco-rojo {
+  text-decoration: underline dotted;
   color: var(--var-rojo-oscuro);
 }
 
-.formulario .white article {
-  padding-top: 50px;
+.formulario .obligatorios {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 13px;
 }
 
 .formulario p {
-  padding-block: 10px;
-  font-size: 14px;
-}
-
-.formulario .obligatorios {
-  margin-bottom: 30px;
-  font-size: 14px;
+  padding-block: 2px;
+  font-size: 12px;
 }
 
 fieldset {
   padding: 20px;
   margin-bottom: 20px;
   background-color: var(--var-gris);
+  border: none;
 }
 
 legend {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 label {
@@ -365,14 +378,10 @@ label {
 }
 
 select {
-  width: 50%;
+  width: 48.5%;
   padding: 10px;
 } 
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-}
 
 .fechas, .contacto {
   display: flex;
@@ -388,7 +397,7 @@ input, textarea {
 }
 
 .correo-contacto, .precio {
-  margin-top: 47px;
+  margin-top: 29px;
 }
 
 .registro-previo label input {
@@ -396,29 +405,6 @@ input, textarea {
   margin-right: 5px;
 }
 
-button {
-  background-color: #CC3333;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #a82828;
-}
-
-.campos-obligatorios, .nota-privacidad {
-  font-size: 0.9em;
-  color: #555;
-}
-
-
-.acepto-privacidad a {
-  color: var(--var-rojo-oscuro);
-  text-decoration: none;
-}
 
 .detalles-logisticos {
   display: flex;
@@ -430,7 +416,6 @@ button:hover {
   flex: 1; 
 }
 
-
 .registro-previo{
   display: flex;
   flex-direction: column;
@@ -440,21 +425,19 @@ input[type="checkbox"], input[type="radio"] {
   width: inherit;
 }
 
-
 .contacto div label {
   display: flex;
   align-items: end;
 }
 
-
-input:focus {
-  outline: none;
-  border: 1px solid var(--var-negro);
-  box-shadow: 0 0 8px var(--var-negro);
-  transition: box-shadow 0.3s ease, border 0.3s ease;
+.campos-obligatorios, .nota-privacidad {
+  line-height: 1.6;
 }
-
 
 #enviar {
   margin-top: 15px;
 }
+
+
+
+

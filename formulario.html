@@ -18,7 +18,6 @@
 
   <header class="container">
     <a href="index.html" class="foco"><strong>FOCO</strong></a>
-
     <nav>
       <ul class="enlaces-header">
         <li><a href="nosotros.html">Nosotros</a></li>
@@ -37,29 +36,30 @@
         </article>
       </section>
 
-      <section class="white">
+      <section class="blanco">
         <article>
-          <p class="obligatorios">Los campos señalados <span class="asterisco-rojo">*</span> son obligatorios</p>
-          
-          <form class="formulario-evento">
 
-          <fieldset>
-            <legend>Datos del evento</legend>
-            <label for="nombre">Nombre <span class="asterisco-rojo">*</span></label>
-            <input type="text" id="nombre" required>
+          <form class="formulario-evento">
             
-            <label for="descripcion">Descripción <span class="asterisco-rojo">*</span></label>
-            <p>Detalles del evento, propósito, actividades, qué podrán enctontrar los asistentes...</p>
-            <textarea id="descripcion" rows="5" required></textarea>
+            <p class="obligatorios">Los campos señalados <span class="red-text">*</span> son obligatorios</p>
             
-            <div class="fechas">
-              <div>
-                <label for="fecha-inicio">Fecha y hora de inicio <span class="asterisco-rojo">*</span></label>
-                <input type="datetime-local" id="fecha-inicio" required>
-              </div>
-              <div>
-                <label for="fecha-fin">Fecha y hora de finalización <span class="asterisco-rojo">*</span></label>
-                <input type="datetime-local" id="fecha-fin" required>
+            <fieldset>
+              <legend>Datos del evento</legend>
+              <label for="nombre">Nombre <span class="asterisco-rojo">*</span></label>
+              <input type="text" id="nombre" required>
+              
+              <label for="descripcion">Descripción <span class="asterisco-rojo">*</span></label>
+              <p>Detalles del evento, propósito, actividades, qué podrán enctontrar los asistentes...</p>
+              <textarea id="descripcion" rows="5" required></textarea>
+              
+              <div class="fechas">
+                <div>
+                  <label for="fecha-inicio">Fecha y hora de inicio <span class="asterisco-rojo">*</span></label>
+                  <input type="datetime-local" id="fecha-inicio" required>
+                </div>
+                <div>
+                  <label for="fecha-fin">Fecha y hora de finalización <span class="asterisco-rojo">*</span></label>
+                  <input type="datetime-local" id="fecha-fin" required>
               </div>
             </div>
             
@@ -74,7 +74,7 @@
               <option value="educativo">Educativo</option>
             </select>
           </fieldset>
-
+          
           
           <fieldset>
             <legend>Información sobre la organización</legend>
@@ -114,7 +114,7 @@
             </div>
             
           </fieldset>
-
+          
           
           
           
@@ -122,37 +122,39 @@
             <legend>Detalles logísticos</legend>
             <div class="detalles-logisticos">
               <div>
-                <label for="aforo">Aforo *</label>
+                <label for="aforo">Aforo <span class="asterisco-rojo">*</span></label>
                 <p class="subtexto">Nombre completo</p>
                 <input type="number" id="aforo" required>
               </div>
               <div>
-                <label for="precio" class="precio">Precio de la entrada *</label>
+                <label for="precio" class="precio">Precio de la entrada <span class="asterisco-rojo">*</span></label>
                 <input type="number" id="precio" required>
               </div>
             </div>
             
-            <label>¿Es necesario registro previo? *</label>
+            <label>¿Es necesario registro previo? <span class="asterisco-rojo">*</span></label>
             
             <div class="registro-previo">
               <label><input type="radio" name="registro" value="si" required> Sí</label>
               <label><input type="radio" name="registro" value="no"> No</label>
             </div>
           </fieldset>
-
-        </form>
+          
+          
           
           <p class="nota-privacidad">
-            INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE FOCO. Finalidades: recogida de datos para incluirla en la base de datos de FOCO. Legitimación: consentimiento del interesado. Destinatarios: no están previstas cesiones de datos a terceros, excepto por obligación legal. Derechos: puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <span class="red-text">info@focoesmeralda.net</span>. Información adicional: puede ampliar la información en el enlace de <span class="red-text">Aviso Legal</span> y <span class="red-text">Política de privacidad</span>.
+            INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE FOCO. Finalidades: recogida de datos para incluirla en la base de datos de FOCO. Legitimación: consentimiento del interesado. Destinatarios: no están previstas cesiones de datos a terceros, excepto por obligación legal. Derechos: puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <span class="e-mail">info@focoesmeralda.net</span>. Información adicional: puede ampliar la información en el enlace de <span class="red-text">Aviso Legal</span> y <span class="red-text">Política de privacidad</span>.
           </p>
           
           <label class="acepto-privacidad">
-            <input type="checkbox" required> He leído y acepto la <a href="#">política de privacidad</a>.
+            <input type="checkbox" required> He leído y acepto la <a href="#" class="red-text">política de privacidad <span class="asterisco-rojo">*</span></a>
           </label>
           
           <button type="submit" id="enviar">Enviar</button>
+          
+        </form>
+        
         </article>
-
       </section>
 
     </main>
