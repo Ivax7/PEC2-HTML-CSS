@@ -159,26 +159,25 @@ footer {
   text-decoration: none;
 }
 
-button {
+
+.button, button {
   font-size: 18px;
   background-color: var(--var-rojo-oscuro);
   color: var(--var-blanco);
   border: none;
   padding: 15px 35px;
   transition: .2s ease-in-out;
-  margin-top: 40px;
   cursor: pointer;
-}
-
-button a {
   color: var(--var-blanco);
   text-decoration: none;
   transition: .2s ease-in-out;
 }
 
-button:hover a {
+
+.button:hover, button:hover {
   color: var(--var-negro);
 }
+
 
 article {
   width: 100%;
@@ -208,6 +207,7 @@ h1 {
 h2 {
   font-size: 31px;
   font-weight: 500;
+  margin-bottom: 50px;
 }
 
 
