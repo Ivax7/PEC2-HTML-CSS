@@ -6,9 +6,168 @@
   <link rel="stylesheet" href="estilos.css">
   <meta name="description" content="Formulario">
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  
   <title>Formulario</title>
 </head>
 <body>
+
+  <div>
+
+  <header class="container">
+    <a href="index.html" class="foco"><strong>FOCO</strong></a>
+
+    <nav>
+      <ul class="enlaces-header">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="formulario.html" class="active">Sugiere</a></li>
+      </ul>
+    </nav>
+  </header>
   
+
+    <main class="formulario">
+      <section>
+        <article>
+          <h1 class="foco-titulo">SUGIERE TU EVENTO</h1>
+          <h3>Comparte tu evento y conecta con tu público</h3>
+        </article>
+      </section>
+
+      <section class="white">
+        <article>
+          <p class="obligatorios">Los campos señalados <span class="asterisco-rojo">*</span> son obligatorios</p>
+          
+          <form class="formulario-evento">
+
+          <fieldset>
+            <legend>Datos del evento</legend>
+            <label for="nombre">Nombre <span class="asterisco-rojo">*</span></label>
+            <input type="text" id="nombre" required>
+            
+            <label for="descripcion">Descripción <span class="asterisco-rojo">*</span></label>
+            <p>Detalles del evento, propósito, actividades, qué podrán enctontrar los asistentes...</p>
+            <textarea id="descripcion" rows="5" required></textarea>
+            
+            <div class="fechas">
+              <div>
+                <label for="fecha-inicio">Fecha y hora de inicio <span class="asterisco-rojo">*</span></label>
+                <input type="datetime-local" id="fecha-inicio" required>
+              </div>
+              <div>
+                <label for="fecha-fin">Fecha y hora de finalización <span class="asterisco-rojo">*</span></label>
+                <input type="datetime-local" id="fecha-fin" required>
+              </div>
+            </div>
+            
+            <label for="ubicacion">Ubicación <span class="asterisco-rojo">*</span></label>
+            <input type="text" id="ubicacion" required>
+            
+            <label for="categoria">Categoría <span class="asterisco-rojo">*</span></label>
+            <select id="categoria" required>
+              <option value="">Selecciona una opción</option>
+              <option value="cultural">Cultural</option>
+              <option value="deportivo">Deportivo</option>
+              <option value="educativo">Educativo</option>
+            </select>
+          </fieldset>
+
+          
+          <fieldset>
+            <legend>Información sobre la organización</legend>
+            <label for="nombre-org">Nombre de la organización <span class="asterisco-rojo">*</span></label>
+            <input type="text" id="nombre-org" required>
+            
+            <label for="descripcion-org">Descripción de la organización <span class="asterisco-rojo">*</span></label>
+            <textarea id="descripcion-org" rows="4" required></textarea>
+            
+            <div class="contacto">
+              <div>
+                <label for="persona-contacto">
+                  Persona de contacto <span class="asterisco-rojo">*</span>
+                </label>
+                <p class="subtexto">Nombre completo</p>
+                <input type="text" id="persona-contacto" required>
+              </div>
+              <div>
+                <label for="correo-contacto" class="correo-contacto">
+                  Correo electrónico de contacto <span class="asterisco-rojo">*</span>
+                </label>
+                <input type="email" id="correo-contacto" required>
+              </div>
+            </div>
+            
+            <div class="contacto">
+              <div>
+                <label for="telefono">
+                  Teléfono de contacto <span class="asterisco-rojo">*</span>
+                </label>
+                <input type="tel" id="telefono" required>
+              </div>
+              <div>
+                <label for="web-org">Sitio web de la organización</label>
+                <input type="url" id="web-org" placeholder="https://ejemplo.com">
+              </div>
+            </div>
+            
+          </fieldset>
+
+          
+          
+          
+          <fieldset>
+            <legend>Detalles logísticos</legend>
+            <div class="detalles-logisticos">
+              <div>
+                <label for="aforo">Aforo *</label>
+                <p class="subtexto">Nombre completo</p>
+                <input type="number" id="aforo" required>
+              </div>
+              <div>
+                <label for="precio" class="precio">Precio de la entrada *</label>
+                <input type="number" id="precio" required>
+              </div>
+            </div>
+            
+            <label>¿Es necesario registro previo? *</label>
+            
+            <div class="registro-previo">
+              <label><input type="radio" name="registro" value="si" required> Sí</label>
+              <label><input type="radio" name="registro" value="no"> No</label>
+            </div>
+          </fieldset>
+
+        </form>
+          
+          <p class="nota-privacidad">
+            INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE FOCO. Finalidades: recogida de datos para incluirla en la base de datos de FOCO. Legitimación: consentimiento del interesado. Destinatarios: no están previstas cesiones de datos a terceros, excepto por obligación legal. Derechos: puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <span class="red-text">info@focoesmeralda.net</span>. Información adicional: puede ampliar la información en el enlace de <span class="red-text">Aviso Legal</span> y <span class="red-text">Política de privacidad</span>.
+          </p>
+          
+          <label class="acepto-privacidad">
+            <input type="checkbox" required> He leído y acepto la <a href="#">política de privacidad</a>.
+          </label>
+          
+          <button type="submit" id="enviar">Enviar</button>
+        </article>
+
+      </section>
+
+    </main>
+  </div>
+
+
+  <footer class="footer-subpage">
+    <div class="enlaces-footer">
+      <p><abbr title="Universitar Oberta de Catalunya">UOC</abbr>. Diciembre de 2024. Nombre y apellidos del estudiante</p>
+      <ul>
+        <li><a href="">Aviso Legal</a></li>
+        <li><a href="">Política de privacidad</a></li>
+        <li><a href="">Política de <em>cookies</em></a></li>      
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
