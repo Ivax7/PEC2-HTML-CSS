@@ -5,7 +5,6 @@
   --var-gris: #F5F5F7;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -127,7 +126,6 @@ footer {
   color: var(--var-blanco);
 }
 
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type */
 .enlaces-footer ul li {
   list-style-type: "·";
 }
@@ -154,7 +152,7 @@ footer {
   position: relative;
 }
 
-.red-text {
+.texto-rojo {
   color: var(--var-rojo-oscuro);
   text-decoration: none;
 }
@@ -195,6 +193,23 @@ article h3 {
 }
 
 
+.cursiva {
+  font-style: oblique;
+}
+
+.negrita {
+  font-weight: 700;
+}
+
+.lema {
+  font-size: 31px; 
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+#lema-grande {
+  font-size: 40px;
+}
 
 /* ------INDEX------ */
 
@@ -204,18 +219,16 @@ h1 {
   font-weight: 900;
 }
 
-h2 {
-  font-size: 31px;
-  font-weight: 500;
-  margin-bottom: 50px;
+.presentacion .lema {
+  margin-bottom: 80px;
 }
-
 
 /* ------NOSOTROS------ */
 
 .foco-titulo {
   padding-top: 60px;
   padding-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .blanco {
@@ -234,8 +247,8 @@ h2 {
   padding-block: 60px 30px;
 }
 
-.nosotros p, .nosotros ul {
-  line-height: 2;
+.nosotros article p, .nosotros article ul {
+  line-height: 1.8;
   font-size: 24px;
 }
 
@@ -244,7 +257,9 @@ h2 {
   margin-left: 20px;
 }
 
+
 /* ------EVENTOS------ */
+
 
 table {
   width: 100%;
@@ -271,10 +286,8 @@ caption {
 
 th, td {
   border: 1px solid var(--var-negro);
-  padding: 4px 25px 25px 10px;
   text-align: left;
-  line-height: 1.5;
-  font-size: 19px;
+  font-size: 17.5px;
 }
 
 th {
@@ -282,17 +295,16 @@ th {
   font-weight: 700;
   padding: 10px;
   font-size: 16px;
+  text-transform: uppercase;
 }
 
-
-.descripcion .red-text:hover {
-  text-decoration: underline;
+tbody td:first-child {
+  padding-right: 70px;
+  font-size: 19px;
 }
 
-.descripcion a::after {
-  content: "\2192";
-  margin-left: 5px;
-  text-decoration: none;
+tbody td:last-child {
+  line-height: 1.5;
 }
 
 .nota {
@@ -301,35 +313,23 @@ th {
   border: 1px solid var(--var-negro);
   border-top: none;
   bottom: 0;
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 60px;
 }
 
+.flecha::after{
+  content: "\2192";
+  margin-left: 5px;
+  text-decoration: none;
+  color: var(--var-rojo-oscuro);
+}
 
-
+.flecha:hover {
+  text-decoration: underline;
+}
 
 /* ------FORMULARIO------ */
 
-input {
-  border: 1px solid var(--var-negro);
-  width: 100%;
-  padding: 10px;
-}
-
-input:invalid {
-  border-color: #FF0000;
-}
-
-input:valid {
-  border-color: #4CAF50;
-}
-
-input:focus {
-  outline: none;
-  border: 1px solid var(--var-negro);
-  box-shadow: 0 0 8px var(--var-negro);
-  transition: box-shadow 0.3s ease, border 0.3s ease;
-}
 
 textarea {
   width: 100%;
@@ -341,7 +341,6 @@ textarea {
   max-width: 900px;
   margin: auto;
   border-radius: 10px;
-  margin-bottom: 80px;
 }
 
 .asterisco-rojo {
@@ -355,7 +354,7 @@ textarea {
   font-size: 13px;
 }
 
-.formulario p {
+.formulario-evento p {
   padding-block: 2px;
   font-size: 12px;
 }
@@ -382,6 +381,26 @@ select {
   padding: 10px;
 } 
 
+input {
+  border: 1px solid var(--var-negro);
+  width: 100%;
+  padding: 10px;
+}
+
+input:invalid {
+  border-color: #FF0000;
+}
+
+input:valid {
+  border-color: #4CAF50;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--var-negro);
+  box-shadow: 0 0 8px var(--var-negro);
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
 
 .fechas, .contacto {
   display: flex;
@@ -436,8 +455,8 @@ input[type="checkbox"], input[type="radio"] {
 
 #enviar {
   margin-top: 15px;
+  margin-bottom: 80px;
 }
-
 
 
 

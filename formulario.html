@@ -14,7 +14,6 @@
 </head>
 <body>
 
-  <div>
 
   <header class="container">
     <a href="index.html" class="foco"><strong>FOCO</strong></a>
@@ -27,12 +26,11 @@
     </nav>
   </header>
   
-
     <main class="formulario">
       <section>
         <article>
-          <h1 class="foco-titulo">SUGIERE TU EVENTO</h1>
-          <h3>Comparte tu evento y conecta con tu público</h3>
+          <h1 class="foco-titulo">Sugiere tu evento</h1>
+          <p class="lema" id="lema-grande">Comparte tu evento y conecta con tu público</p>
         </article>
       </section>
 
@@ -41,7 +39,7 @@
 
           <form class="formulario-evento">
             
-            <p class="obligatorios">Los campos señalados <span class="red-text">*</span> son obligatorios</p>
+            <p class="obligatorios">Los campos señalados <span class="texto-rojo">*</span> son obligatorios</p>
             
             <fieldset>
               <legend>Datos del evento</legend>
@@ -50,7 +48,7 @@
               
               <label for="descripcion">Descripción <span class="asterisco-rojo">*</span></label>
               <p>Detalles del evento, propósito, actividades, qué podrán enctontrar los asistentes...</p>
-              <textarea id="descripcion" rows="5" required></textarea>
+              <textarea id="descripcion" rows="8" required></textarea>
               
               <div class="fechas">
                 <div>
@@ -74,15 +72,14 @@
               <option value="educativo">Educativo</option>
             </select>
           </fieldset>
-          
-          
+                    
           <fieldset>
             <legend>Información sobre la organización</legend>
             <label for="nombre-org">Nombre de la organización <span class="asterisco-rojo">*</span></label>
             <input type="text" id="nombre-org" required>
             
             <label for="descripcion-org">Descripción de la organización <span class="asterisco-rojo">*</span></label>
-            <textarea id="descripcion-org" rows="4" required></textarea>
+            <textarea id="descripcion-org" rows="8" required></textarea>
             
             <div class="contacto">
               <div>
@@ -114,10 +111,7 @@
             </div>
             
           </fieldset>
-          
-          
-          
-          
+
           <fieldset>
             <legend>Detalles logísticos</legend>
             <div class="detalles-logisticos">
@@ -143,11 +137,11 @@
           
           
           <p class="nota-privacidad">
-            INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE FOCO. Finalidades: recogida de datos para incluirla en la base de datos de FOCO. Legitimación: consentimiento del interesado. Destinatarios: no están previstas cesiones de datos a terceros, excepto por obligación legal. Derechos: puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <span class="e-mail">info@focoesmeralda.net</span>. Información adicional: puede ampliar la información en el enlace de <span class="red-text">Aviso Legal</span> y <span class="red-text">Política de privacidad</span>.
+            INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE <span class="negrita">FOCO. Finalidades:</span> recogida de datos para incluirla en la base de datos de FOCO. <span class="negrita">Legitimación:</span> consentimiento del interesado.<span class="negrita">Destinatarios:</span> no están previstas cesiones de datos a terceros, excepto por obligación legal. <span class="negrita">Derechos:</span> puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <span class="texto-rojo">info@focoesmeralda.net</span>. Información adicional: puede ampliar la información en el enlace de <span class="texto-rojo">Aviso Legal</span> y <span class="texto-rojo">Política de privacidad</span>.
           </p>
           
           <label class="acepto-privacidad">
-            <input type="checkbox" required> He leído y acepto la <a href="#" class="red-text">política de privacidad <span class="asterisco-rojo">*</span></a>
+            <input type="checkbox" required> He leído y acepto la <a href="#" class="texto-rojo">política de privacidad <span class="asterisco-rojo">*</span></a>
           </label>
           
           <button type="submit" id="enviar">Enviar</button>
@@ -158,16 +152,15 @@
       </section>
 
     </main>
-  </div>
 
 
   <footer class="footer-subpage">
     <div class="enlaces-footer">
       <p><abbr title="Universitar Oberta de Catalunya">UOC</abbr>. Diciembre de 2024. Nombre y apellidos del estudiante</p>
       <ul>
-        <li><a href="">Aviso Legal</a></li>
-        <li><a href="">Política de privacidad</a></li>
-        <li><a href="">Política de <em>cookies</em></a></li>      
+        <li><a href="#">Aviso Legal</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Política de <span lang="en" class="cursiva">cookies</span></a></li>      
       </ul>
     </div>
   </footer>
